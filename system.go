@@ -30,7 +30,6 @@ func ExecBash(command string, args []string) (int, string, error) {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Printf("Command:%s execute error\n", command)
-			//return 2, "", errors.New("command error")
 		}
 	}()
 
